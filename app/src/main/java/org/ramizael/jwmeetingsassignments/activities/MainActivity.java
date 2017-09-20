@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import org.ramizael.jwmeetingsassignments.R;
+import org.ramizael.jwmeetingsassignments.utils.Utils;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -82,9 +83,9 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_person) {
-            goToCreatePersonActivity(getCurrentFocus());
+            Utils.goToPersonActivity(getCurrentFocus(), this);
         } else if (id == R.id.nav_gallery) {
-            goToPersonActivity(getCurrentFocus());
+
         } else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_manage) {
@@ -100,14 +101,4 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-
-    public void goToCreatePersonActivity(View view) {
-        Intent intent = new Intent(this, CreatePersonActivity.class);
-        startActivity(intent);
-    }
-
-    public void goToPersonActivity(View view) {
-        Intent intent = new Intent(this, PersonListActivity.class);
-        startActivity(intent);
-    }
 }

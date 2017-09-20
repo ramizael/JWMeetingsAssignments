@@ -10,13 +10,15 @@ public class Person extends SugarRecord {
 
     private String name;
     private Integer age;
+    private Boolean status;
 
     public Person() {
     }
 
-    public Person(String name, Integer age) {
+    public Person(String name, Integer age, Boolean status) {
         this.name = name;
         this.age = age;
+        this.status = status;
     }
 
     public String getName() {
@@ -33,5 +35,13 @@ public class Person extends SugarRecord {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    public Boolean getStatus() {
+        return status;
+    }
+
+    public void setStatus(Boolean status) {
+        this.status = status;
     }
 }

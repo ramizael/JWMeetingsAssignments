@@ -11,14 +11,30 @@ import java.util.List;
 
 public class Meeting extends SugarRecord {
 
-    List<Assignment> assignments;
-    Date meetingDate;
+    private List<Assignment> assignments;
+    private Date meetingDate;
 
     public Meeting() {
     }
 
     public Meeting(List<Assignment> assignments, Date meetingDate) {
         this.assignments = assignments;
+        this.meetingDate = meetingDate;
+    }
+
+    public List<Assignment> getAssignments() {
+        return assignments;
+    }
+
+    public void setAssignments(List<Assignment> assignments) {
+        this.assignments = assignments;
+    }
+
+    public Date getMeetingDate() {
+        return meetingDate;
+    }
+
+    public void setMeetingDate(Date meetingDate) {
         this.meetingDate = meetingDate;
     }
 }

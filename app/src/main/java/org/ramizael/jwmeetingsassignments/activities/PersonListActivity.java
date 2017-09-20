@@ -20,6 +20,7 @@ import android.view.MenuItem;
 import org.ramizael.jwmeetingsassignments.R;
 
 import org.ramizael.jwmeetingsassignments.entities.Person;
+import org.ramizael.jwmeetingsassignments.utils.Utils;
 
 import java.util.List;
 
@@ -40,6 +41,7 @@ public class PersonListActivity extends AppCompatActivity {
      * device.
      */
     private boolean mTwoPane;
+    private PersonListActivity activity = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,8 +56,9 @@ public class PersonListActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+                Utils.goToCreatePersonActivity(view, activity);
             }
         });
         // Show the Up button in the action bar.
