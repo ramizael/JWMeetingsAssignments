@@ -1,4 +1,4 @@
-package org.ramizael.jwmeetingsassignments.activities;
+package org.ramizael.jwmeetingsassignments.fragments;
 
 import android.app.Activity;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -11,6 +11,8 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 
 import org.ramizael.jwmeetingsassignments.R;
+import org.ramizael.jwmeetingsassignments.activities.PersonDetailActivity;
+import org.ramizael.jwmeetingsassignments.activities.PersonListActivity;
 import org.ramizael.jwmeetingsassignments.entities.Person;
 
 /**

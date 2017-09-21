@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="menu_person_detail_edit_id" type="id" />
+    <item name="menu_person_detail_delete_id" type="id" />
+</resources>
