@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import org.ramizael.jwmeetingsassignments.R;
@@ -62,7 +63,9 @@ public class PersonDetailFragment extends Fragment {
 
         // Show the dummy content as text in a TextView.
         if (mItem != null) {
-            ((TextView) rootView.findViewById(R.id.person_detail)).setText(mItem.getName() + " " + mItem.getAge());
+            ((TextView) rootView.findViewById(R.id.person_detail_name)).setText(mItem.getName());
+            ((TextView) rootView.findViewById(R.id.person_detail_age)).setText(mItem.getAge().toString());
+            ((CheckBox) rootView.findViewById(R.id.person_detail_status)).setChecked(mItem.getStatus());
         }
 
         return rootView;

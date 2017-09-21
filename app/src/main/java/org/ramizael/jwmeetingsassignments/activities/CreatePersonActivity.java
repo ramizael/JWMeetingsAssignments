@@ -30,17 +30,11 @@ public class CreatePersonActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                boolean success = savePerson();
-
-
-
-//                Snackbar.make(view, "Person added " + success, Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
+                savePerson();
 
                 Utils.goToPersonActivity(view, activity);
-                }
+            }
         });
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     private boolean savePerson() {
@@ -51,8 +45,9 @@ public class CreatePersonActivity extends AppCompatActivity {
 
         name = (EditText) findViewById(R.id.person_input_name);
         age = (EditText) findViewById(R.id.person_input_age);
+        status = (CheckBox) findViewById(R.id.person_checkBox_status);
 
-        Person person = new Person(name.getText().toString(), Integer.valueOf(age.getText().toString()), Boolean.TRUE);
+        Person person = new Person(name.getText().toString(), Integer.valueOf(age.getText().toString()), status.isChecked());
 
         person.save();
 

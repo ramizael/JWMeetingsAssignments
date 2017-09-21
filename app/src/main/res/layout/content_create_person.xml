@@ -33,4 +33,15 @@
         android:layout_marginLeft="16dp"
         app:layout_constraintLeft_toLeftOf="parent" />
 
+    <CheckBox
+        android:id="@+id/person_checkBox_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:checked="true"
+        android:text="Active"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/person_input_age" />
+
 </android.support.constraint.ConstraintLayout>
