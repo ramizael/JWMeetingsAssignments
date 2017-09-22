@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_person) {
             Utils.goToPersonActivity(getCurrentFocus(), this);
         } else if (id == R.id.nav_manage) {
-
+            Utils.goToRolesActivity(getCurrentFocus(), this);
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {

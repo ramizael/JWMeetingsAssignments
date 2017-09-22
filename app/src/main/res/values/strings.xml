@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">JWMeetingsAssignments</string>
+    <string name="app_name">JW Meeting Assignments</string>
     <string name="edit_message">Enter a message</string>
     <string name="button_send">Send</string>
 
@@ -141,4 +141,9 @@
     <string name="title_person_detail">Person Detail</string>
     <string name="Edit">Edit</string>
     <string name="Delete">Delete</string>
+    <string name="txt_role">Role</string>
+    <string name="ok">OK</string>
+    <string name="title_activity_create_role">CreateRoleActivity</string>
+    <string name="title_activity_roles_scrolling">RolesScrollingActivity</string>
+    <string name="title_activity_list_roles">ListRolesActivity</string>
 </resources>

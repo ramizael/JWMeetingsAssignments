@@ -2,9 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.ramizael.jwmeetingsassignments">
 
-    <application android:label="@string/app_name"
-        android:name="com.orm.SugarApp">
-
+    <application
+        android:name="com.orm.SugarApp"
+        android:label="@string/app_name">
         <meta-data
             android:name="DATABASE"
             android:value="JwMeetingAssignments.db" />
@@ -34,7 +34,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="org.ramizael.jwmeetingsassignments.activities.MainActivity" />
         </activity>
-
         <activity
             android:name=".activities.PersonListActivity"
             android:label="@string/title_person_list"
@@ -52,6 +51,15 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="org.ramizael.jwmeetingsassignments.activities.PersonListActivity" />
+        </activity>
+        <activity
+            android:name=".activities.RoleListActivity"
+            android:label="@string/title_activity_list_roles"
+            android:parentActivityName=".activities.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.ramizael.jwmeetingsassignments.activities.MainActivity" />
         </activity>
     </application>
 
