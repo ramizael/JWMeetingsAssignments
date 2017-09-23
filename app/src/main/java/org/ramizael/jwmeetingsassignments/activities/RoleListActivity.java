@@ -1,8 +1,11 @@
 package org.ramizael.jwmeetingsassignments.activities;
 
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -14,6 +17,7 @@ import android.widget.Toast;
 
 import org.ramizael.jwmeetingsassignments.R;
 import org.ramizael.jwmeetingsassignments.entities.Role;
+import org.ramizael.jwmeetingsassignments.fragments.CreateRoleFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,8 +71,16 @@ public class RoleListActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Load Create Role Dialog Fragment", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                Fragment prev = getFragmentManager().findFragmentByTag("dialog");
+                if (prev != null) {
+                    ft.remove(prev);
+                }
+                ft.addToBackStack(null);
+
+                CreateRoleFragment fragment = CreateRoleFragment.newInstance("", "");
+                fragment.show(ft, "New Role");
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
