@@ -1,9 +1,7 @@
 package org.ramizael.jwmeetingsassignments.activities;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -14,7 +12,14 @@ import org.ramizael.jwmeetingsassignments.R;
 import org.ramizael.jwmeetingsassignments.entities.Person;
 import org.ramizael.jwmeetingsassignments.utils.Utils;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class CreatePersonActivity extends AppCompatActivity {
+
+    @BindView (R.id.person_input_name) EditText name;
+    @BindView (R.id.person_input_age) EditText age;
+    @BindView (R.id.person_checkBox_status) CheckBox status;
 
     CreatePersonActivity activity = this;
 
@@ -35,17 +40,11 @@ public class CreatePersonActivity extends AppCompatActivity {
                 Utils.goToPersonActivity(view, activity);
             }
         });
+
+        ButterKnife.bind(this);
     }
 
     private boolean savePerson() {
-
-        EditText name;
-        EditText age;
-        CheckBox status;
-
-        name = (EditText) findViewById(R.id.person_input_name);
-        age = (EditText) findViewById(R.id.person_input_age);
-        status = (CheckBox) findViewById(R.id.person_checkBox_status);
 
         Person person = new Person(name.getText().toString(), Integer.valueOf(age.getText().toString()), status.isChecked());
 
